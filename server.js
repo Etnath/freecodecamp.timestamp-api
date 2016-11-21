@@ -1,6 +1,7 @@
 var express = require("express");
+var port = process.env.PORT || 8080;
 
-var app = express()
+var app = express();
 
 app.get('/:time', function (req, res) 
 {
@@ -37,7 +38,7 @@ app.get('/:time', function (req, res)
   }
 });
 
-app.listen(8080, function () 
+app.listen(port, function () 
 {
-  console.log('Example app listening on port 8080!')
+  console.log('Example app listening on port ' + port '!');
 });
